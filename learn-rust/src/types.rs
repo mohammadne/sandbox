@@ -15,7 +15,7 @@ pub fn run() {
     let is_active = 10 > 5;
     
     // character
-    let c1 = 'a'
+    let c1 = 'a';
 
     println!("{:?}", (x, y, z, is_active, c1));
 }
