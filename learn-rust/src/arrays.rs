@@ -1,7 +1,7 @@
 // fixed list
 // elements are the same data type
 
-use std::mem
+use std::mem;
 
 pub fn run() {
     let numbers: [i32; 5] = [1, 2, 3, 4, 5];
@@ -9,7 +9,7 @@ pub fn run() {
     println!("{:?}", numbers);
     println!("single: {}", numbers[0]);
     println!("array occupies {} bytes", mem::size_of_val(&numbers));
-
+ 
     let mut re_assignables: [i32; 5] = [1, 2, 3, 4, 5];
     re_assignables[2] = 20;
 
