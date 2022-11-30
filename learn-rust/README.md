@@ -6,5 +6,4 @@ cargo init
 
 cargo run
 cargo run --release
-
 ```
