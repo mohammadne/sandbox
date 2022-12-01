@@ -1,11 +1,11 @@
 pub fn run() {
     let mut count = 0;
-    
+
     // infinite loop
     loop {
         count += 1;
 
-        println!("count is {}", count)
+        println!("count is {}", count);
 
         if count == 20 {
             break;
@@ -21,7 +21,7 @@ pub fn run() {
             println!("fizz");
         }
 
-        count +11;
+        count + 11;
     }
 
     for x in 0..10 {
