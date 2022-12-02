@@ -29,8 +29,8 @@ make generate
 # generate the CRD manifests at config/crd/bases/app.example.com_podsets.yaml
 make manifest
 
-# install CR in the cluster
-kubectl apply -f config/samples/
+# make changes to the controller
+vim controllers/podset_controller.go
 ```
 
 ### Running on the cluster
