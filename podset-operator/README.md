@@ -11,13 +11,26 @@
 You’ll need a Kubernetes cluster to run against. You can use [KIND](https://sigs.k8s.io/kind) to get a local cluster for testing, or run against a remote cluster.
 **Note:** Your controller will automatically use the current context in your kubeconfig file (i.e. whatever cluster `kubectl cluster-info` shows).
 
+## Running
+
 ``` bash
+# scaffold project
 operator-sdk init --project-name podset-operator --domain=example.com --repo=github.com/mohammadne/sandbox/podset-operator
+
+# create api
 operator-sdk create api --group=app --version=v1alpha1 --kind=PodSet --controller --resource
 
-# 
+# make changes to the api
 vim api/v1alpha1/podset_type.go
 
+# update the api/v1alpha1/zz_generated.deepcopy.go
+make generate
+
+# generate the CRD manifests at config/crd/bases/app.example.com_podsets.yaml
+make manifest
+
+# install CR in the cluster
+kubectl apply -f config/samples/
 ```
 
 ### Running on the cluster
